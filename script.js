@@ -2,6 +2,20 @@ var arrows = document.querySelector(".arrows");
 var background = document.querySelector("header");
 var links = document.getElementsByClassName("link");
 
+var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"img/1.jpg",
+                "img/2.jpg",
+                "img/3.jpg",
+                "img/4.jpg"
+			);
+
 for (i=0; i < links.length; i++) {
     
     links[i].addEventListener("click", promeni, false);
